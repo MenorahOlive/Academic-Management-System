@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    padding: 1rem;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+#text-logo{
+    color:#6C63FF;
+    text-transform: uppercase;
+}
+.nav-links{
+    display: flex;
+}
+.nav-links a{
+    text-decoration: none;
+    color: gray;
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+.nav-links a::after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 2px;
+    color: gray;
+}
+
+.logout-link{
+    font-weight: 600;
+    cursor: pointer;
+    
+}
+
+.nav-links .active{
+    color: black;
+    font-weight: 600;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+.admin-hero img{
+    width:600px;
+    display: block;
+    margin: 0 auto;
+}
+.hero-text{
+    margin: 0 auto;
+    text-align: center
+}
+.hero-links{
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: center;
+}
+.hero-links a {
+    color: #6C63FF;
+    padding: 0 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+.departments-page{
+    display: flex;
+    gap: 1em;
+    padding: 1rem 0
+}
+#departments-list{
+    min-height: 90vh;
+    min-width: 15vw;
+    overflow-y: scroll;
+}
+#departments-crud{
+    min-width: 30vw;
+    min-height: 90vh;
+    overflow-y: scroll;
+}
+.admin-container{
+    padding: 1em;
+    border-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.admin-section-title{
+    font-size: 1rem;
+    font-weight:bold;
+    text-align: center;
+
+}
+.department-list{
+    margin: 1em 0;
+}
+.department-list-card{
+    border-radius:7px;
+    font-weight: 600;
+    font-size: smaller;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.8em;
+    margin-bottom: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.caption{
+    font-size: 0.8em;
+    color:gray
+}
+.department-list-card ::after{
+    content: "";
+    width: auto;
+    height: 4px;
+    color:gray;
+    display: block
+}
+.department-list-card .row{
+    align-items: center;
+    justify-content: space-between;
+}
+.delete-icon{
+    color: red;
+}
+.form-container label{
+    display: block;
+    font-size: small;
+    font-weight: 500;
+    
+}
+.form-container input,select{
+    min-height: 40px;
+    padding:0.5em 1em;
+    width: 100%;
+    border-radius: 7px;
+    border: 1.5px solid gray;
+    outline: none;
+
+}
+.department-form input{
+    margin: 1em 0;
+}
+.form-container input:focus{
+    border: 1.6px solid black;
+}
+.form-container input::placeholder{
+    font-size: smaller;
+}
+
+.department-form .form{
+    margin: 1em 0;
+}
+
+.submit-btn{
+    background-color: #6C63FF;
+    color:white;
+    padding: 1em 0.5em;
+    min-width:200px;
+    border: none;
+    border-radius:7px;
+    
+}
+
+.warning-container{
+    color:red;
+    margin: 1em auto;
+    font-weight: 600;
+    
+
+}
+.warning-container img{
+    width:60%;
+    margin-bottom: 1em;
+}
+.department-form .submit-btn{
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.admin-page{
+    display: flex;
+    gap: 1em;
+    padding: 1em 0;
+}
+.admin-section{
+    min-height: 85vh;
+}
+
+#admissions-list{
+    min-width: 90vw;
+}
+#admissions-detail{
+    width: 70vw;
+}
+#admissions-list +.caption{
+    text-align: center;
+}
+
+.student-admission-card{
+    display: flex;
+    margin:1em 0;
+    padding: 0.5em;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.student-admission-card img{
+    width:80px;
+    height:80px;
+    border-radius:7px;
+    margin-right: 0.5em;
+}
+.student-admission-card .name{
+    font-weight: 600;
+
+}
+.student-admission-card .course{
+    font-weight: 500;
+    font-size: small;
+}
+.text-margin{
+    margin: 0.5em 0;
+}
+.div-placeholder{
+    display: grid;
+    place-items: center;
+}
+.div-placeholder img{
+    width:100%;
+    height:500px;
+    border-radius: 7px;
+}
+.staff-card{
+    max-width: 20vw;
+}
+.searchField{
+    height:35px;
+    border-radius: 7px;
+    padding: 0.5em 1em;
+    border: 1.4px solid gray;
+    outline: none;
+}
+.searchField::placeholder{
+    font-size: smaller;
+}
+#staff-list-section .searchField{
+    margin: 1em 0 ;
+}
+#staff-detail{
+    width: 50vw;
+}
+.staff-details-container .staff-profile img{
+    width: 100px;
+    height: 100px;
+}
+.staff-details-container{
+    margin: 0 auto;
+}
+.staff-update-form .row{
+    gap: 3em;
+}
+.staff-update-form .form-container{
+    margin: 0.5em 0;
+}
+.divider{
+    width:100%;
+    color: gray;
+    height:7px;
+}
+.admin-section-subtitle{
+    font-weight: 600;
+    font-size: 1.2em;
+}
+.textarea{
+    width:100%;
+    height: 100px;
+}
+.staff-send-email .admin-section-subtitle{
+margin: 0.5em 0;
+}
+.primary-btn{
+    background-color: #6C63FF;
+    color: white;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 7px;
+
+}
+button{
+    cursor: pointer;
+}
+button i{
+margin-right: 0.5em;
+}
+.send-mail-btn{
+    display: block;
+    margin-left: auto;
+    margin-top: 1em;
+}
+
+#update-profile-btn{
+    display: block;
+    margin-left: auto;
+}
+#staff-add{
+    width: 25vw;
+    margin-left: 2em;
+}
+#staff-add .form-container{
+    margin: 1em 0.5em;
+}
+#add-staff-btn{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin: 1em 0;
+}
+.primary{
+    color: #6C63FF;
+}
+.warning{
+    color:red;
+}
+.text-btn{
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: underline;
+}
+.student-admission-card .text-btn{
+    padding:1em;
+}
+#class-allocation-form .form-container{
+    margin: 1em 0 ;
+}
+.small-image{
+    width:2em;
+    height: 2em;
+}
+.lec-section{
+    width:50%;
+}
+.lec-section .form-container{
+    margin: 1em 0;
+}
+.form-container input,select{
+    margin: 0.5em 0;
+}
+.full-btn{
+    width: 100%;
+}
+.row-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
